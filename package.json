@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@skatejs/ssr": "^0.12.2",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-preset-env": "^1.6.0",
@@ -28,6 +29,7 @@
     ]
   },
   "jest": {
+    "testEnvironment": "@skatejs/ssr/jest",
     "modulePathIgnorePatterns": [
       "./node_modules"
     ]
