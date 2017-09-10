@@ -3,6 +3,7 @@
     "@skatejs/ssr": "^0.12.2",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
@@ -26,12 +27,21 @@
   "babel": {
     "presets": [
       "babel-preset-env"
-    ]
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "transform-es2015-modules-commonjs"
+        ]
+      }
+    }
   },
   "jest": {
-    "testEnvironment": "@skatejs/ssr/jest",
-    "modulePathIgnorePatterns": [
-      "./node_modules"
+    "testPathIgnorePatterns": [
+      "<rootDir>/(build|docs|node_modules)/"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/?!(lit-html)"
     ]
   },
   "dependencies": {
