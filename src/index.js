@@ -1,8 +1,11 @@
-import { withRenderer } from 'skatejs/esnext';
+import { render, html, TemplateResult } from 'lit-html';
 
-export const withLitHtml = Base =>
-  class extends withRenderer(Base || HTMLElement) {
+export const withRenderer = Base => {
+  const ElClass = Base || HTMLElement;
+  return class extends ElClass {
     rendererCallback(renderRoot, renderCallback) {
-      renderCallback().renderTo(renderRoot);
+      let result = html`${renderCallback()}`;
+      return render(result, renderRoot);
     }
   };
+};
