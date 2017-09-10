@@ -22,6 +22,11 @@
     "build": "npm run build:es && npm run build:esnext && npm run build:node && npm run build:umd",
     "prepublish": "npm run build"
   },
+  "babel": {
+    "presets": [
+      "babel-preset-env"
+    ]
+  },
   "jest": {
     "modulePathIgnorePatterns": [
       "./node_modules"
