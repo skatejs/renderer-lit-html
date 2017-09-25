@@ -55,5 +55,6 @@
   "name": "@skatejs/renderer-lit-html",
   "peerDependencies": {
     "lit-html": "^0.6.0"
-  }
+  },
+  "version": "0.0.0"
 }
