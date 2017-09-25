@@ -1,8 +1,7 @@
-import { withRenderer } from 'skatejs/esnext';
-import { render } from 'lit-html';
+import { render } from 'lit-html/lib/lit-extended';
 
-export const withLitHtml = Base =>
-  class extends withRenderer(Base || HTMLElement) {
+export default (Base = HTMLElement) =>
+  class extends Base {
     rendererCallback(renderRoot, renderCallback) {
       render(renderCallback(), renderRoot);
     }
