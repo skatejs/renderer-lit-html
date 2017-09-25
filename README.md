@@ -1,29 +1,25 @@
 # skatejs/renderer-lit-html
 
-*NOTE!!! This is not published to NPM yet and is not final. Once https://github.com/skatejs/skatejs/pull/1218 is merged, this will be officially released!*
-
-> SkateJS renderer for [LitHTML](https://github.com/PolymerLabs/lit-html).
+SkateJS renderer for [Lit HTML](https://github.com/PolymerLabs/lit-html).
 
 ## Install
 
 ```sh
-npm install @skatejs/renderer-lit-html lit-html skatejs
+npm install @skatejs/renderer-lit-html
 ```
 
 ## Usage
 
-```js
-import { props, withProps } from './node_modules/skatejs/esnext/with-props.js';
-import { withLitHtml } from './node_modules/@skatejs/renderer-lit-html/esnext/index.js';
-import { html } from './node_modules/lit-html/lib/lit-html.js';
+This assumes knowledge of SkateJS.
 
-class Hello extends withComponent(withLitHtml()) {
-  renderCallback ({ name }) {
-    return html`<div>Hello, ${name}!</div>`;
+```js
+import { html } from 'lit-html';
+import { withComponent } from 'skatejs';
+import withLitHtml from '@skatejs/renderer-lit-html';
+
+class MyComponent extends withComponent(withLitHtml()) {
+  renderCallback() {
+    return html`Hello, <slot />!`;
   }
 }
-
-Hello.props = {
-  name: { ...props.string, ...{ default: 'World' } }
-};
 ```
