@@ -5,7 +5,7 @@ SkateJS renderer for [Lit HTML](https://github.com/PolymerLabs/lit-html).
 ## Install
 
 ```sh
-npm install @skatejs/renderer-lit-html
+npm install skatejs lit-html @skatejs/renderer-lit-html
 ```
 
 ## Usage
