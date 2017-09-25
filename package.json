@@ -1,4 +1,5 @@
 {
+  "name": "@skatejs/renderer-lit-html",
   "devDependencies": {
     "@skatejs/ssr": "^0.13.0",
     "babel-cli": "^6.24.1",
