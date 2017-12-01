@@ -1,3 +1,5 @@
+___This has been moved to the [skatejs](https://github.com/skatejs/skatejs) monorepo!___
+
 # skatejs/renderer-lit-html
 
 SkateJS renderer for [Lit HTML](https://github.com/PolymerLabs/lit-html).
